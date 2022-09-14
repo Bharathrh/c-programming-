@@ -1,0 +1,34 @@
+Write a program to store information of n students ( Roll No, Name, Marks )  in structure and display it.
+
+#include <stdio.h>
+struct student {
+    char firstName[50];
+    int roll;
+    float marks;
+} ;
+
+int main()
+ {
+ 	struct student std;
+    int i,n;
+    printf("Enter the total number of student = ");
+    scanf("%d",&n);
+    for (i = 0; i < n; i++)
+	 {
+        std.roll = i + 1;
+        printf("\n\n");
+        printf("Enter first name: ");
+        scanf("%s", &std.firstName);
+        printf("Enter marks: ");
+        scanf("%f", &std.marks);
+    }
+    for (i = 0; i < n; i++) 
+	{
+        printf("\nRoll number: %d\n", i + 1);
+        printf("First name: ");
+        puts(std.firstName);
+        printf("Marks: %.f", std.marks);
+        printf("\n");
+    }
+    return 0;
+}
